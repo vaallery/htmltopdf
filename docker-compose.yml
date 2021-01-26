@@ -1,0 +1,7 @@
+version: "3"
+services:
+  test:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && ruby test.rb"
+    volumes:
+      - .:/myapp
